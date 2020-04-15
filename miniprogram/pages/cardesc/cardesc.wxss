@@ -1,0 +1,274 @@
+/* pages/home/home.wxss */
+
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* 直接设置swiper属性 */
+
+swiper {
+  height: 500rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+text {
+  /* display: block; */
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+
+.self-support {
+  border-radius: 5rpx;
+  background-color: rgb(243, 240, 65);
+  font-size: 25rpx;
+  padding: 5rpx;
+  margin-top: 8rpx;
+  margin-left: 8rpx;
+}
+
+.title_2 {
+  margin: 10rpx;
+  margin-top: 20rpx;
+}
+
+.title {
+  display: inline-block;
+  font-size: 34rpx;
+  font-weight: 600;
+  margin: 10rpx;
+  color: black;
+  text-align: justify;
+}
+
+.price {
+  display: inline-block;
+  color: white;
+  background-color: darkorange;
+  border: solid 1rpx darkorange;
+}
+
+.price_1 {
+  display: inline-block;
+  border: solid 1rpx darkorange;
+  background-color: white;
+  color: darkorange;
+  margin-left: 0rpx;
+}
+
+.price_2 {
+  font-size: 25rpx;
+  color: rgba(0, 0, 0, 0.705);
+}
+
+.guarantee {
+  font-size: 25rpx;
+  background-color: bisque;
+  color: rgba(0, 0, 0, 0.705);
+  padding: 5rpx;
+  border-radius: 5rpx;
+}
+
+.loan {
+  /* vertical-align: middle; */
+  height: 80rpx;
+  background-color: rgb(236, 191, 106, 0.705);
+  line-height: 80rpx;
+  margin-top: 20rpx;
+}
+
+.loan_txt {
+  color: #f44336;
+}
+
+.loan_txt_bd {
+  color: #f44336;
+  font-size: 35rpx;
+  font-weight: 600;
+}
+
+.pos {
+  height: 15rpx;
+  background-color: rgb(238, 237, 237);
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.info_item {
+  width: 33.33%;
+  margin-left: 20rpx;
+}
+.info_item2 {
+  width: 66.33%;
+  margin-left: 20rpx;
+}
+.info_name {
+  font-size: 25rpx;
+  color: rgba(0, 0, 0, 0.705);
+}
+
+.info_value {
+  font-size: 30rpx;
+  color: rgb(44, 5, 185);
+}
+
+.car_desc {
+  padding: 20rpx;
+}
+
+.luoshi_title {
+  padding: 15rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  background-color: rgba(70, 138, 216);
+  color: white;
+}
+
+.luoshi_title_view {
+  writing-mode: vertical-rl;
+  margin: 10rpx;
+  padding: 20rpx;
+}
+
+.luoshi_item {
+  width: 20%;
+  margin-top: 30rpx;
+}
+
+.luoshi_pos {
+  width: 15%;
+}
+
+.luoshi_img {
+  width: 85rpx;
+  height: 100rpx;
+  /* padding-right: 10rpx; */
+}
+
+.luoshi_btn {
+  width: 150rpx;
+  height: 100rpx;
+}
+
+.luoshi_txt {
+  color: rgba(70, 138, 216);
+  font-size: 25rpx;
+  padding-left: 25rpx;
+}
+
+.line_flag {
+  width: 80rpx;
+  height: 1rpx;
+  display: inline-block;
+  margin: 20rpx auto;
+  background-color: gainsboro;
+  text-align: center;
+}
+
+.line {
+  width: 100%;
+  height: 2rpx;
+  display: inline-block;
+  margin: 20rpx 0rpx;
+  background-color: gainsboro;
+  text-align: center;
+}
+
+.detail-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  float: left;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100rpx;
+}
+
+.check-load {
+  color: #fff;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  left: 0rpx;
+  /* top: 10rpx; */
+  width: 100%;
+  height: 70rpx;
+  font-size: 28rpx;
+  background: rgba(0, 0, 0, 0.15);
+  padding-left: 10rpx
+}
+
+.button-green {
+  background-color: #4caf50; /* Green */
+  padding-top: 10rpx;
+}
+
+.button-red {
+  background-color: #f44336; /* 红色 */
+  padding-top: 10rpx;
+}
+
+.image_detail {
+  width: 100%;
+}
+
+button {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 0rpx;
+  width: 50%;
+  height: 100%;
+  line-height: 70rpx;
+}
+
+.detail-nav image {
+  width: 70rpx;
+  height: 50rpx;
+  margin: 20rpx 40rpx;
+}
+
+.line_nav {
+  width: 5rpx;
+  height: 100%;
+  background-color: gainsboro;
+}
+.car_quas {
+  padding: 20rpx;
+}
+
+.car_imagetext {
+  padding: 20rpx;
+}
+/* 占位 */
+
+.temp {
+  height: 100rpx;
+}
+
+.text-remark {
+  display: block;
+  font-size: 25rpx;
+  margin: 10rpx;
+}

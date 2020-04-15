@@ -1,0 +1,225 @@
+<!--pages/home/home.wxml-->
+<!-- banner -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+        <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<scroll-view scroll-y="true">
+  <!-- 标题 -->
+  <text class="self-support">二手</text>
+  <text class="title">{{cardata.car_name}}</text>
+  <!-- 价格 -->
+  <view></view>
+  <text class="price" decode='true'>￥{{cardata.car_price}}&nbsp;</text>
+  <text class="price_1" decode='true'> &nbsp;&nbsp; 含售前修理费：￥{{cardata.car_fix_price}}元&nbsp;</text>
+  <view>
+    <text class="price_2">*提档,过户费另算；厂家指导价：{{cardata.car_original_price}}；节省{{cardata.car_thrift_price}}</text>
+  </view>
+  <view>
+    <text class="guarantee">{{cardata.car_insurance}}</text>
+  </view>
+  <view class="loan">
+    <text class="loan_txt">三成首付 </text>
+    <text class="loan_txt_bd"> {{cardata.car_downpayment_price}}</text>
+    <text class="loan_txt">月供 {{cardata.car_month_price}} 元</text>
+  </view>
+  <!-- 分隔 -->
+  <!-- <view class="pos"></view> -->
+  <view class="title_2">【基本信息】</view>
+  <view>
+    <view class="flex-row">
+      <view class="info_item">
+        <text class="info_name">登记年月:</text>
+        <view></view>
+        <text class="info_value">{{cardata.car_create_date}}</text>
+      </view>
+      <view class="info_item">
+        <text class="info_name">表显里程[km]:</text>
+        <view></view>
+        <text class="info_value">{{cardata.car_km_desc}}</text>
+      </view>
+      <view class="info_item">
+        <text class="info_name">排放:</text>
+        <view></view>
+        <text class="info_value">{{cardata.car_standard}}</text>
+      </view>
+    </view>
+    <view class="flex-row">
+      <view class="info_item">
+        <text class="info_name">排量:</text>
+        <view></view>
+        <text class="info_value">{{cardata.car_cc}}</text>
+      </view>
+      <view class="info_item">
+        <text class="info_name">档位:</text>
+        <view></view>
+        <text class="info_value">{{cardata.car_gears}}</text>
+      </view>
+      <view class="info_item">
+        <text class="info_name">座位数:</text>
+        <view></view>
+        <text class="info_value">{{cardata.car_seat}}</text>
+      </view>
+    </view>
+    <view class="flex-row">
+      <view class="info_item">
+        <text class="info_name">车辆所在地:</text>
+        <view></view>
+        <text class="info_value">{{cardata.car_location}}</text>
+      </view>
+      <view class="info_item">
+        <text class="info_name">牌照归属地:</text>
+        <view></view>
+        <text class="info_value">{{cardata.car_license_plate}}</text>
+      </view>
+      <view class="info_item">
+        <text class="info_name">服务专员:</text>
+        <view></view>
+        <text class="info_value">{{cardata.car_salesman}}</text>
+      </view>
+
+    </view>
+    <view class="flex-row">
+      <view class="info_item">
+        <text class="info_name">路测工程师:</text>
+        <view></view>
+        <text class="info_value">{{cardata.car_drive_tester}}</text>
+      </view>
+      <view class="info_item2">
+        <text class="info_name">车辆评估组:</text>
+        <view></view>
+        <text class="info_value">{{cardata.car_reconditioning}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 分隔 -->
+  <view class="pos"></view>
+
+  <view>【车源描述】</view>
+
+  <view class="car_desc">
+  
+    <text decode='true'>
+    {{cardata.car_source_decs}}</text>
+  
+  </view>
+  <!-- 分隔 -->
+  <view class="pos"></view>
+
+  <view>【检测报告】</view>
+  <view>
+    <view class="flex-row">
+      <view class="luoshi_pos">
+        <view class="luoshi_title_view">
+          <text class="luoshi_title" decode='true'> 收购部 </text>
+        </view>
+      </view>
+      <!-- <view class="luoshi_pos"></view> -->
+      <view class="luoshi_item">
+        <button class="luoshi_btn" size="mini" bindtap="luoshi_action" data-index="0">
+          <image class="luoshi_img" src="/assets/doc.png" />
+        </button>
+        <view></view>
+        <text class="luoshi_txt">里程曲线</text>
+      </view>
+      <view class="luoshi_item">
+        <button class="luoshi_btn" size="mini" bindtap="luoshi_action" data-index="1">
+          <image class="luoshi_img" src="/assets/doc.png" />
+        </button>
+        <view></view>
+        <text class="luoshi_txt">维保记录</text>
+      </view>
+      <view class="luoshi_item">
+        <button class="luoshi_btn" size="mini" bindtap="luoshi_action" data-index="2">
+          <image class="luoshi_img" src="/assets/doc.png" />
+        </button>
+        <view></view>
+        <text class="luoshi_txt">附件清单</text>
+      </view>
+    </view>
+    <view class="flex-row">
+      <view class="luoshi_pos">
+        <view class="luoshi_title_view">
+          <text class="luoshi_title" decode='true'> 质检部 </text>
+        </view>
+      </view>
+      <view class="luoshi_item">
+        <button class="luoshi_btn" size="mini" bindtap="luoshi_action" data-index="3">
+          <image class="luoshi_img" src="/assets/doc.png" />
+        </button>
+        <view></view>
+        <text class="luoshi_txt">功能配置</text>
+      </view>
+      <view class="luoshi_item">
+        <button class="luoshi_btn" size="mini" bindtap="luoshi_action" data-index="4">
+          <image class="luoshi_img" src="/assets/doc.png" />
+        </button>
+        <view></view>
+        <text class="luoshi_txt">耗材清单</text>
+      </view>
+      <view class="luoshi_item">
+        <button class="luoshi_btn" size="mini" bindtap="luoshi_action" data-index="5">
+          <image class="luoshi_img" src="/assets/doc.png" />
+        </button>
+        <view></view>
+        <text class="luoshi_txt">整修清单</text>
+      </view>
+    </view>
+    <view class="flex-row">
+      <view class="luoshi_pos">
+        <view class="luoshi_title_view">
+          <text class="luoshi_title" decode='true'> 质检部 </text>
+        </view>
+      </view>
+      <view class="luoshi_item">
+        <button class="luoshi_btn" size="mini" bindtap="luoshi_action" data-index="6">
+          <image class="luoshi_img" src="/assets/doc.png" />
+        </button>
+        <view></view>
+        <text class="luoshi_txt">瑕疵报告</text>
+      </view>
+
+    </view>
+  </view>
+ <!-- 分隔 -->
+  <view class="pos"></view>
+
+  <view>【质保范畴】</view>
+
+  <view class="car_quas">
+   
+ 
+    <text decode='true'>* 默认提供长达1年的核心系统质保，
+   </text>
+   <text decode='true'>* 推荐增购质保升级套餐，包括更广的覆盖面、更高的赔额，以及更长的保障时间，让后期更加省心省钱，具体请咨询服务专员；
+   </text>
+  <text decode='true'>* 个别车辆可能因为年份或者里程超限而无法提供质保，购车前均会明确告知；</text>
+  
+  </view>
+ <!-- 分隔 -->
+  <view class="pos"></view>
+
+  <view>【图文笔记】</view>
+
+  <view class="car_imagetext">
+  
+     <text decode='true'>
+    {{cardata.car_source_decs}}</text>
+  </view>
+
+
+  <view class="temp"></view>
+</scroll-view>
+
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <button class="button-red" bindtap="phone" formType="submit">电话咨询</button>
+  <button class="button-green" bindtap="share" formType="submit" data-name="shareBtn" open-type="share">分享给好友</button>
+</view>
+<!-- 查看更多图片 -->
+<view class="check-load">
+  点击查看更多图片
+</view>

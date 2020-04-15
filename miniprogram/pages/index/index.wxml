@@ -1,0 +1,52 @@
+<view class="tabTit box">
+  <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="filterTab">
+    <text>{{item}}</text>
+  </view>
+</view>
+<!--品牌-->
+<view class="tabLayer" style="display:{{tab[0]}}">
+  <text class="{{brand_id==item.id?'active':''}}" wx:for="{{brandList}}" wx:key="pp" wx:for-item="item" data-id="{{item.id}}" data-index="0" data-txt="{{item.title}}" bindtap="filter">{{item.title}}</text>
+</view>
+<!--价格-->
+<view class="tabLayer" style="display:{{tab[1]}}">
+  <text class="{{price_id==item.id?'active':''}}" wx:for="{{priceList}}" wx:key="pp" wx:for-item="item" data-id="{{item.id}}" data-index="1" data-txt="{{item.title}}" bindtap="filter">{{item.title}}</text>
+</view>
+<!--地区-->
+<view class="tabLayer" style="display:{{tab[2]}}">
+  <text class="{{location_id==item.id?'active':''}}" wx:for="{{locationList}}" wx:key="pp" wx:for-item="item" data-id="{{item.id}}" data-index="2" data-txt="{{item.title}}" bindtap="filter">{{item.title}}</text>
+</view>
+<!-- 列表 -->
+<scroll-view class="scroll-style" scroll-y style="height:{{scrollYHeight}}px" scroll-top="{{scrollTop}}" bindscroll="bindscroll">
+  <view class="container">
+    <view class='xiangqing' bindtap="toDesc" wx:for="{{list}}" data-index="{{index}}" hover-class="refresh-view-hover">
+      <view class='xiangqing_img'>
+        <image mode="widthFix" src='https://6361-carwarehouse-aobo-1300885272.tcb.qcloud.la/car_img/{{item.car_img_location}}/{{item.car_number}}/face_2.jpg'></image>
+      </view>
+      <view class='xiangqing_info'>
+        <!-- <text class='zi'>二手</text> -->
+        <text class='title'>{{item.car_name}}</text>
+        <view class='house'>{{item.car_create_date}} | {{item.car_km}} | {{item.car_standard}}</view>
+        <view class='prix'>
+          <text class='prix1'>￥{{item.car_price}}</text>
+          <text class='prix2'>指导价:{{item.car_original_price}}</text>
+          <text class='prix3'>{{item.car_location}}</text>
+        </view>
+      </view>
+    </view>
+    <loading visible="{{hasMore}}"></loading>
+  </view>
+</scroll-view>
+<!-- 无数据 -->
+<view class="none-data" style="display:{{noneData}}">
+  <image src="/assets/none_data.png" />
+  <text>暂无数据</text>
+</view>
+<!-- 刷新按钮 -->
+<!-- <view class="refresh-view" bindtap="clicRefresh" hover="true" hover-class="refresh-view-hover"> -->
+
+<view class="refresh-view" hover="true" hover-class="refresh-view-hover">
+  <button class="refresh-view" hover="true" hover-class="refresh-view-hover" bindtap="clickShare" formType="submit" data-name="shareBtn" open-type="share">
+    <image id="refresh" class="refresh-icon" src="/assets/share.png"></image>
+    <text class="refresh-text">分享</text>
+  </button>
+</view>

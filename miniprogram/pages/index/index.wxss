@@ -1,0 +1,345 @@
+/* pages/index/index.wxss */
+
+.clear {
+  clear: both;
+  overflow: hidden;
+}
+
+.tabTit {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: solid 1px #eee;
+  border-top: solid 1px #eee;
+  position:fixed;top:0;
+  width: 750rpx;
+  z-index: 1;
+  background: #fff;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.tabTit .active {
+  color: #e64340;
+  background: #fff;
+}
+
+.tabTit .active image {
+  transform: rotate(180deg);
+  background: none;
+}
+
+.tabTit image {
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.tabLayer {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  width: 750rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 80rpx;
+  z-index: 1;
+  background: #fff;
+  padding-bottom: 40rpx;
+  border-bottom: solid 1px #eee;
+  text-align: center;
+  visibility: visible;
+}
+
+.tabLayer_hidden {
+  height: 0rpx;
+  display: none;
+}
+
+.tabLayer text {
+  width: 210rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: left;
+  border: solid 1px #eee;
+  margin: 20rpx 0 0 26rpx;
+  font-size: 30rpx;
+}
+
+.tabLayer .active {
+  color: #e64340;
+  border-color: #e64340;
+}
+
+.flex1 {
+  flex: 1;
+  overflow: hidden;
+  display: block;
+}
+/*scroll的样式  */
+.scroll-style{
+  padding-top: 85rpx;
+}
+/*弹性盒模型*/
+
+.box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+navigator {
+  display: inline;
+}
+
+.list {
+  margin-top: 50px;
+}
+
+.list .list_item {
+  margin-top: 10px;
+  padding: 10px;
+  height: 100px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.list .list_item .img {
+  float: left;
+  width: 40%;
+  height: 100%;
+}
+
+.list .list_item .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.list .list_item .info {
+  width: 59%;
+  float: right;
+  height: 100px;
+  position: relative;
+}
+
+.list .list_item .info .title {
+  color: #333;
+  margin-left: 10px;
+  font-size: 30rpx;
+}
+
+.list .list_item .info .price {
+  color: #ff2727;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 30rpx;
+}
+
+.list .list_item .info .num {
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+  color: #747474;
+  margin-left: 10px;
+  font-size: 30rpx;
+}
+
+/* pages/list/list.wxss */
+
+.container {
+  padding: 0;
+  /* margin-top: 91rpx; */
+}
+
+.xiangqing {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border-bottom: 1.5rpx #dedede solid;
+  /* margin-top: 10rpx; */
+  /* padding-top: 10rpx; */
+}
+
+.xiangqing_img {
+  width: 30%;
+  padding: 20rpx;
+  padding-bottom: 10rpx;
+}
+
+.xiangqing_img image {
+  width: 100%;
+  height: 210rpx;
+}
+
+.xiangqing_info {
+  width: 60%;
+   padding-top: 5rpx; 
+  /*padding-bottom: 5rpx;*/
+}
+
+.xiangqing_info .zi {
+  border: 2rpx #fa8d33 solid;
+  color: #fa8d33;
+  padding: 2rpx 10rpx;
+  font-size: 18rpx;
+  margin-right: 22rpx;
+  border-radius: 9rpx;
+}
+
+.xiangqing_info .title {
+  font-weight: 600;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: #404040;
+}
+
+.key {
+  margin: 15rpx 0;
+}
+
+.key text {
+  margin-right: 15rpx;
+  padding: 0 9rpx;
+}
+
+.key .text0 {
+  background: #ddf7ff;
+  color: #77b3e3;
+}
+
+.key .text1 {
+  background: #fff0df;
+  color: #edd590;
+}
+
+.key .text2 {
+  background: #bee2d4;
+  color: 71C7A5;
+}
+
+.key .text3 {
+  background: #daf3ff;
+  color: 97C2EA;
+}
+
+.house {
+  margin-top: 15rpx;
+  color: #a8a8a8;
+  font-size: 25rpx;
+}
+
+/* .prix {
+  margin-top: 5rpx;
+  padding-top: 0rpx;
+} */
+
+.prix .prix1 {
+  color: #fa7c15;
+  font-size: 25rpx;
+  font-weight: 600;
+  margin-right: 25rpx;
+}
+
+.prix2 {
+  font-size: 25rpx;
+  text-decoration: line-through;
+}
+.prix {
+display: flex;
+flex-wrap: wrap;
+margin-top: 20rpx;
+} 
+
+.prix3 {
+font-size: 25rpx;
+/* margin-left: 45rpx; */
+color: #77b3e3;
+margin-left:auto;
+}
+
+
+.container {
+  display: block;
+}
+
+.yongjin {
+  width: 100%;
+  padding-bottom: 10rpx;
+}
+
+.yongjin .yongjin_info {
+  background: #f6f6f6;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15rpx;
+  padding-top: 17rpx;
+  padding-left: 17rpx;
+  overflow: hidden;
+}
+
+.yongjin .yongjin_info .yongjin_img {
+  width: 45rpx;
+  height: 45rpx;
+  float: left;
+}
+
+.yongjin .yongjin_info .yongjin_font {
+  padding-left: 17rpx;
+  float: left;
+  color: #f56d03;
+  font-size: 32rpx;
+}
+
+.refresh-view {
+  color: #fff;
+  position: fixed;
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  bottom: 30rpx;
+  right: 30rpx;
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  font-size: 28rpx;
+  background: #fff;
+  border-style: solid;
+  box-shadow: 0px 1px 1px 1px #ddd;
+  border-width: 0rpx;
+}
+
+.refresh-view-hover {
+  /* opacity: 0.9;
+    transform: scale(0.99,0.99);  */
+  background: #eee;
+}
+
+.refresh-icon {
+  padding-top: 10rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+.refresh-text{
+  color: #000;
+  font-size: 20rpx;
+}
+.none-data {
+  position: fixed;
+  /* bottom: 0; */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.none-data image {
+  width: 120rpx;
+  height: 120rpx;
+}
+.none-data text {
+  padding-top: 10rpx;
+  color: #a8a8a8;
+  font-size: 30rpx;
+}

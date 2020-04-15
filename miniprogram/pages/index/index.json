@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "凯成爱车坊",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "loading": "/components/loading/loading"
+  },
+  "enablePullDownRefresh": true
+}

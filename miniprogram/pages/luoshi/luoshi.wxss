@@ -1,0 +1,11 @@
+/* pages/luoshi/luoshi.wxss */
+.luoshi_tx {
+  padding: 10rpx;
+  font-size: 30rpx;
+  padding-bottom: 20rpx;
+}
+
+.luoshi_img {
+  width: 100%;
+  /* height: 100%; */
+}

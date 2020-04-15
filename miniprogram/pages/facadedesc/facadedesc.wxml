@@ -1,0 +1,44 @@
+<!--pages/facadedesc/facadedesc.wxml-->
+<scroll-view>
+<text class="face_tx">外观图({{car_img_url[3].length}})</text>
+<view class="face_box">
+  <block wx:for="{{car_img_url[3]}}">
+    <image class="face_img" src="{{item}}" data-src="{{item}}" data-index="3" bindtap="previewImg" ></image>
+  </block>
+</view>
+
+<text class="face_tx">中控方向盘({{car_img_url[0].length}})</text>
+<view class="face_box">
+  <block wx:for="{{car_img_url[0]}}">
+    <image lazy-load class="face_img" src="{{item}}" data-src="{{item}}" data-index="0" bindtap="previewImg"></image>
+  </block>
+</view>
+
+<text class="face_tx">车厢座椅({{car_img_url[1].length}})</text>
+<view class="face_box">
+  <block wx:for="{{car_img_url[1]}}">
+    <image lazy-load class="face_img" src="{{item}}" data-src="{{item}}" data-index="1" bindtap="previewImg"></image>
+  </block>
+</view>
+
+<text class="face_tx">后备箱及附件({{car_img_url[4].length}})</text>
+<view class="face_box">
+  <block wx:for="{{car_img_url[4]}}">
+    <image lazy-load class="face_img" src="{{item}}" data-src="{{item}}" data-index="4" bindtap="previewImg"></image>
+  </block>
+</view>
+
+<text class="face_tx">机舱({{car_img_url[2].length}})</text>
+<view class="face_box">
+  <block wx:for="{{car_img_url[2]}}">
+    <image lazy-load class="face_img" src="{{item}}" data-src="{{item}}" data-index="2" bindtap="previewImg"></image>
+  </block>
+</view> 
+
+<text class="face_tx">轮上及其它({{car_img_url[5].length}})</text>
+<view class="face_box">
+  <block wx:for="{{car_img_url[5]}}">
+    <image lazy-load class="face_img" src="{{item}}" data-src="{{item}}" data-index="5" bindtap="previewImg"></image>
+  </block>
+</view>
+</scroll-view> 

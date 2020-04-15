@@ -1,0 +1,5 @@
+<!--pages/luoshi/luoshi.wxml-->
+<text class="luoshi_tx">【{{name}}】</text>
+
+<image class="luoshi_img" src="{{url}}" bindtap="showImg" mode="widthFix"/>
+
