@@ -1,0 +1,12 @@
+<!--miniprogram/pages/flaw.wxml-->
+<text class="flaw_tx">【{{name}}】</text>
+<text class="flaw_tx flaw_tx_mini">【友情提示】
+ 二手车充满各种使用痕迹，我们称之为“瑕疵”，这是所有二手商品的重要特征，我们希望您在购买前能了解主要瑕疵。
+但受限于搜寻查找程度，或瑕疵定义尺度的个人差异，可能存在个别漏展示的瑕疵，因为在任何情况下，我们都不对
+瑕疵承担维修或赔偿责任，所以建议特别介意瑕疵的客户到场看车，或在线上远程定车前，请服务专员专门复查核对一次。</text>
+
+<view class="main_view" wx:for="{{flaw_desc}}" data-index="{{index}}">
+  <image class="flaw_img" src="{{flaw_img[index]}}" bindtap="previewImg" mode="widthFix"/>
+  <view class="flaw_view"></view>
+  <text class="flaw_tx flaw_tx_desc">{{item}}</text>
+</view>

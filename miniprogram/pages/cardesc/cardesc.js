@@ -4,8 +4,7 @@ Page({
     cardata: {},
     isLike: true,
     // banner
-    imgUrls: [
-    ],
+    imgUrls: [],
     indicatorDots: true, //是否显示面板指示点
     autoplay: true, //是否自动切换
     interval: 3000, //自动切换时间间隔,3s
@@ -68,16 +67,16 @@ Page({
     this.setData({
       cardata: descdata
     })
-    let face_img=[]
-    for (var i = 1; i <= 5; i++){
-      face_img.push("cloud://carwarehouse-aobo.6361-carwarehouse-aobo-1300885272/car_img/" + this.data.cardata.car_img_location+"/" + this.data.cardata.car_number + "/face_" + i + ".jpg")
+    let face_img = []
+    for (var i = 1; i <= 5; i++) {
+      face_img.push("cloud://carwarehouse-aobo.6361-carwarehouse-aobo-1300885272/car_img/" + this.data.cardata.car_img_location + "/" + this.data.cardata.car_number + "/face_" + i + ".jpg")
     }
     this.setData({
       imgUrls: face_img
     })
   },
   //预览图片
-  previewImage: function (event) {
+  previewImage: function(event) {
     // var current = e.target.dataset.src;
     // wx.previewImage({
     //   current: current, // 当前显示图片的http链接  
@@ -85,15 +84,15 @@ Page({
     // })
     wx.navigateTo({
       url: "../facadedesc/facadedesc?number=" + this.data.cardata.car_number +
-        "&title=" + this.data.cardata.car_name+
+        "&title=" + this.data.cardata.car_name +
         "&car_img_center_control=" + this.data.cardata.car_img_center_control +
         "&car_img_chair=" + this.data.cardata.car_img_chair +
         "&car_img_engine_room=" + this.data.cardata.car_img_engine_room +
         "&car_img_face=" + this.data.cardata.car_img_face +
         "&car_img_trunk=" + this.data.cardata.car_img_trunk +
         "&car_img_wheel=" + this.data.cardata.car_img_wheel +
-        "&car_img_location="+this.data.cardata.car_img_location,
-      
+        "&car_img_location=" + this.data.cardata.car_img_location,
+
     })
   },
   /**
@@ -102,12 +101,17 @@ Page({
   luoshi_action(event) {
     var luoshi_index = parseInt(event.currentTarget.dataset.index) + 1;
     console.info(luoshi_index)
+    console.info("car_report_flaw_desc:"+this.data.cardata.car_report_flaw_desc)
     if (luoshi_index == 7) {
-      luoshi_index = 6
+      wx.navigateTo({
+        url: "../flaw/flaw?name=" + this.data.luoshiName[luoshi_index - 1] +
+          "&car_number=" + this.data.cardata.car_number + "&car_report_flaw_desc=" + this.data.cardata.car_report_flaw_desc + "&location=" + this.data.cardata.car_img_location,
+      })
+    } else {
+      wx.navigateTo({
+        url: "../luoshi/luoshi?name=" + this.data.luoshiName[luoshi_index - 1] +
+          "&url=" + "cloud://carwarehouse-aobo.6361-carwarehouse-aobo-1300885272/car_img/" + this.data.cardata.car_img_location + "/" + this.data.cardata.car_number + "/luoshi_" + luoshi_index + ".jpg",
+      })
     }
-    wx.navigateTo({
-      url: "../luoshi/luoshi?name=" + this.data.luoshiName[luoshi_index - 1] +
-        "&url=" + "cloud://carwarehouse-aobo.6361-carwarehouse-aobo-1300885272/car_img/" + this.data.cardata.car_img_location+"/" + this.data.cardata.car_number + "/luoshi_" + luoshi_index + ".jpg",
-    })
   }
 })

@@ -1,0 +1,25 @@
+/* miniprogram/pages/flaw.wxss */
+.flaw_tx {
+  background-color: rgb(238, 237, 237);
+  padding-left: 15rpx;
+  padding-top: 10rpx;
+}
+.flaw_tx_mini{
+  font-size: 20rpx;
+  padding: 20rpx;
+}
+.flaw_tx_desc{
+  font-size: 25rpx;
+  padding: 20rpx;
+}
+.flaw_img {
+  width: 100%;
+}
+.flaw_view{
+  width: 100%;
+  background-color: rgb(238, 237, 237);
+}
+.main_view{
+  display: flex;
+  flex-direction:column;
+}
