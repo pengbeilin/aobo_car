@@ -218,6 +218,6 @@
   <button class="button-green" bindtap="share" formType="submit" data-name="shareBtn" open-type="share">分享给好友</button>
 </view>
 <!-- 查看更多图片 -->
-<view class="check-load">
+<view hidden="{{clickImgShowEnable}}" class="check-load">
   点击查看更多图片
 </view>

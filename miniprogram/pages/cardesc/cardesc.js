@@ -20,6 +20,7 @@ Page({
       "整修清单",
       "瑕疵报告",
     ],
+    clickImgShowEnable: false, //“点击显示更多图片组件”是否显示
   },
   // 拨打电话
   phone() {
@@ -102,7 +103,7 @@ Page({
   luoshi_action(event) {
     var luoshi_index = parseInt(event.currentTarget.dataset.index) + 1;
     console.info(luoshi_index)
-    console.info("car_report_flaw_desc:"+this.data.cardata.car_report_flaw_desc)
+    console.info("car_report_flaw_desc:" + this.data.cardata.car_report_flaw_desc)
     if (luoshi_index == 7) {
       wx.navigateTo({
         url: "../flaw/flaw?name=" + this.data.luoshiName[luoshi_index - 1] +
@@ -115,8 +116,8 @@ Page({
       })
     }
   },
-  //监听屏幕滚动 判断上下滚动
-  onPageScroll: function (ev) {
+  // 监听屏幕滚动 判断上下滚动
+  onPageScroll: function(ev) {
     var _this = this;
     //当滚动的top值最大或最小时，为什么要做这一步是因为在手机实测小程序的时候会发生滚动条回弹，所以为了处理回弹，设置默认最大最小值
     if (ev.scrollTop <= 0) {
@@ -127,13 +128,21 @@ Page({
     //判断浏览器滚动条上下滚动
     if (ev.scrollTop > this.data.scrollTop || ev.scrollTop == wx.getSystemInfoSync().windowHeight) {
       //向下滚动
-      console.info("向下滚动");
+      if (ev.scrollTop > 210) {
+        this.setData({
+          clickImgShowEnable: true
+        })
+      }
     } else {
       //向上滚动
-      console.info("向上滚动");
+      if (ev.scrollTop < 210) {
+        this.setData({
+          clickImgShowEnable: false
+        })
+      }
     }
     //给scrollTop重新赋值
-    setTimeout(function () {
+    setTimeout(function() {
       _this.setData({
         scrollTop: ev.scrollTop
       })
