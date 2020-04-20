@@ -1,5 +1,6 @@
 <!--pages/home/home.wxml-->
 <!-- banner -->
+<wxs src="../../utils/filter.wxs" module="tools"/>
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}">
     <swiper-item>
@@ -101,10 +102,7 @@
   <view>【车源描述】</view>
 
   <view class="car_desc">
-  
-    <text decode='true'>
-    {{cardata.car_source_decs}}</text>
-  
+    <text decode='true'>{{tools.filter_N(cardata.car_source_decs)}}</text>
   </view>
   <!-- 分隔 -->
   <view class="pos"></view>
@@ -207,7 +205,7 @@
   <view class="car_imagetext">
   
      <text decode='true'>
-    {{cardata.car_source_decs}}</text>
+    {{tools.filter_N(cardata.car_source_decs)}}</text>
   </view>
 
 
